@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <script>
+            Function validateForm()
+            {
+                var name=document.form["myForm"]["name"];
+                var email=document.form["myform"]["email"];
+                var ph no=document.form["myform"]["ph no"];
+                if(name.value=="")
+                {
+                    document.getElementById('errorname').innerHTML="please enter a valid name";
+                    name.focus();
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('errorname').innerHTML="";
+                }
+                if(email.value=="")
+                {
+                    
+                document.getElementById('erroremail').innerHTML="please enter a valid email";
+                    email.focus();
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('erroremail').innerHTML="";
+                }
+                if(email.value.indexOf("@",0)<0)
+                {
+                    document.getElementById('erroremail').innerHTML="please enter a valid email";
+                    email.focus();
+                    return false;
+                }
+                if(email.value.indexOf(".",0)<0)
+                {
+                    document.getElementById('erroremail').innerHTML="please enter a valid email";
+                    email.focus();
+                    return false;
+                }
+                 if(ph no.value=="")
+                {
+                    document.getElementById('errorphone').innerHTML="please enter a valid phone number";
+                    ph no.focus();
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('errorphone').innerHTML="";
+                }
+               return true; 
+            }
+        </script>
+    </head>
+    <body>
+    <h1 align="center">Add Contact</h1>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <table align="center">
+        <tr>
+            <td>
+                <label>
+                    Name<span class="required"></span>
+                </label>
+            </td>
+            <td><input type="text" name="name" class="long"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Ph.no<span class="required"></span>
+                </label>
+            </td>
+            <td><input type="text" name="number" class="long"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    email<span class="required"></span>
+                </label>
+            </td>
+            <td><input type="email" name="email" class="long"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td><input type="button" name="save" value="save" class="btn"/>
+            </td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>

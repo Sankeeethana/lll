@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function signup()
+{
+var email=document.getElementById("email").value;
+var pwd=document.getElementById("pwd1").value;
+var filter=/^([a-zA-Z0-9_\].\-])+\@((a-zA-Z0-9\.)+(a-zA-Z0-9]{2,4})+$/;
+var secret=document.getElementById("secret").value;
+if(email=='')
+{
+alert("please enteremail id");
+}
+else if(pwd=='')
+{
+alert("enter the password"0;
+}
+else if(!filter.test(email))
+{
+alert("enter valid email id");
+}
+else if(pwd.length<6 || pwd.length>6)
+{
+alert("passwordmin and max lengthis 6.");
+}
+else if(secret=='')
+{
+    alert("please enter secret code ");
+}
+else{
+alert("thanks");
+}
+}
+</script>
+    </head>
+    <body>
+        <div id="main">
+            <div class="h-tg"></div>
+            <h2 align="center">Sign Up</h2>
+            <H3>Already have an account?<a href="#">sign in</a></H3>
+            <div class="login">
+                <table cellspacing="2" aligh="center" cellpadding="8" border="0">
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" placeholder="enter email id" id="email" class="tb"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>password:</td>
+                        <td><input type="password" placeholder="enter password" id="password" class="tb"/>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>secret:</td>
+                        <td><input type="text" placeholder="enter code" id="code" class="tb"/>
+                        </td>
+                    </tr>
+                       <tr>
+                    
+                        <td><input type="submit" value="sign Up" class="btn" onclick="signup()"></td>
+                    </tr>
+                    <tr>
+                <td>By clicking the "SignUp" button your are creating an account and you agree to the terms of use.
+                 </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
+
+
